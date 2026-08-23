@@ -1,13 +1,15 @@
 ---
 title: 'Hello again'
-description: 'Rebuilt this site with Astro. A short note on why.'
+description: 'I rebuilt this site with Astro. This note gives the reason.'
 pubDate: '2026-08-23'
 ---
 
-This site used to run on Hexo, with a single post from 2019 that said "This is my first post".
+This site used Hexo before. It had one post from 2019. The post said "This is my first post".
 
-I've rebuilt it with [Astro](https://astro.build/): content lives in Markdown, the build runs in
-GitHub Actions, and nothing ships to the browser except HTML. For a blog that gets two or three
-posts a year, the only thing that matters is that it still works when I come back to it.
+I rebuilt the site with [Astro](https://astro.build/). The content is in Markdown files. GitHub
+Actions builds the site. The browser receives only HTML.
 
-More soon. Probably.
+I write two or three posts each year. For a site like this, one thing is important: the site must
+still work when I come back to it.
+
+More posts will follow.

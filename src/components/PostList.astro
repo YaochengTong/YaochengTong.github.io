@@ -10,7 +10,7 @@ const { posts } = Astro.props;
 
 {
 	posts.length === 0 ? (
-		<p class="empty">Nothing here yet.</p>
+		<p class="empty">There are no posts yet.</p>
 	) : (
 		<ul class="posts">
 			{posts.map((post) => (
