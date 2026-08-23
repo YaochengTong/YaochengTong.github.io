@@ -1,0 +1,38 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { EMAIL, GITHUB_URL, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About | ${SITE_TITLE}`} description="About Yaocheng Tong" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About</h1>
+			<p>
+				My name is <strong>Yaocheng Tong</strong>. I'm a software engineer working on backend
+				systems and data infrastructure, with a growing interest in applied AI.
+			</p>
+			<p>
+				I did my Master's in Electrical and Computer Engineering at Rutgers University.
+			</p>
+			<h2>Interests</h2>
+			<ul>
+				<li>Distributed systems and data pipelines</li>
+				<li>Applied AI / LLM tooling</li>
+				<li>Web development (React / TypeScript)</li>
+			</ul>
+			<h2>Contact</h2>
+			<ul>
+				<li>Email: <a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+				<li>GitHub: <a href={GITHUB_URL}>YaochengTong</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

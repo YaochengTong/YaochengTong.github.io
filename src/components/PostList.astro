@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	posts: CollectionEntry<'blog'>[];
+}
+const { posts } = Astro.props;
+---
+
+{
+	posts.length === 0 ? (
+		<p class="empty">Nothing here yet.</p>
+	) : (
+		<ul class="posts">
+			{posts.map((post) => (
+				<li>
+					<a href={`/blog/${post.id}/`}>
+						<span class="date">
+							<FormattedDate date={post.data.pubDate} />
+						</span>
+						<span class="title">{post.data.title}</span>
+					</a>
+					<p class="desc">{post.data.description}</p>
+				</li>
+			))}
+		</ul>
+	)
+}
+<style>
+	.posts {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.posts li {
+		margin-bottom: 1.75rem;
+	}
+	.posts a {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.25rem 1rem;
+		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.posts a:hover .title {
+		color: rgb(var(--accent));
+	}
+	.date {
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+		min-width: 7.5em;
+	}
+	.title {
+		font-size: 1.25em;
+		font-weight: 700;
+	}
+	.desc {
+		margin: 0.25rem 0 0 0;
+		color: rgb(var(--gray-dark));
+	}
+	.empty {
+		color: rgb(var(--gray));
+	}
+</style>

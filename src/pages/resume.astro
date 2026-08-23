@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { EMAIL, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Resume | ${SITE_TITLE}`} description="Resume of Yaocheng Tong" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Resume</h1>
+			<p>
+				Please email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a> for a copy of my resume.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
